@@ -1,0 +1,11 @@
+class CreateEvents < ActiveRecord::Migration[6.1]
+  def change
+    create_table :events do |t|
+      t.string :artist
+      t.text :description
+      t.decimal:price_low
+      t.decimal:price_high
+      t.date :event_date
+    end
+  end
+end
