@@ -11,17 +11,13 @@
     </div>
   <% end %>
 
-  <%= form.collection_select :event_id, @events, :id, :artist, include_blank: false %>
-
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :seat_id_seq %>
-    <%= form.text_field :seat_id_seq %>
-  </div>
+  <%= form.hidden_field :event_id, :value => ticket.event_id %>
+
 
   <div class="field">
     <%= form.label :address %>
@@ -39,9 +35,9 @@
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
-  </div>
+      <%= form.label :phone %>
+      <%= form.text_field :phone %>
+    </div>
 
   <div class="actions">
     <%= form.submit %>
